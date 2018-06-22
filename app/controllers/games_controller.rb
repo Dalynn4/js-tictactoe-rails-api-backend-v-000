@@ -4,7 +4,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.new
     @game.save
-    render json: @game, 'home/index'
+    render json: @game, status: 200
   end
 
 
