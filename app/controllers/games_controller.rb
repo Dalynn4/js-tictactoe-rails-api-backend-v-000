@@ -2,7 +2,6 @@ class GamesController < ApplicationController
   # Add your GamesController code here
 
   def create
-    raise params.inspect
     @game = Game.new(state: params[:state])
     @game.save
     render json: @game, status: 200
