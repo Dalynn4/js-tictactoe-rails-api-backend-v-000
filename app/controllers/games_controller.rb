@@ -15,12 +15,11 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-    render json: @game
+    render json: @games
   end
 
   def update
     @game = Game.find(params[:id])
-
     @game.update(state: params[:state])
     render json: @game
   end
