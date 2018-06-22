@@ -18,7 +18,7 @@ class GamesController < ApplicationController
     render 'home/index'
   end
 
-  def update 
+  def update
     @game = Game.find(params[:id])
 
     @game.update
