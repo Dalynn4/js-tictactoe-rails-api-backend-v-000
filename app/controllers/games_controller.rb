@@ -7,7 +7,6 @@ class GamesController < ApplicationController
     render json: @game, status: 200
   end
 
-
   def show
     @game = Game.find(params[:id])
     render json: @game
